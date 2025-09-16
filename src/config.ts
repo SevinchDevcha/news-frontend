@@ -1,3 +1,3 @@
- const API_URL="http://sevinch.devcha.uz"
+ const API_URL="https://sevinch.devcha.uz"
 
  export default API_URL
