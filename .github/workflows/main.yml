@@ -1,0 +1,31 @@
+name: CD
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: connect to server and deploy changes
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            cd news-frontend/
+            git stash
+            git pull origin master --rebase
+            rm -rf ./build
+            yarn install --legacy-peer-deps
+            yarn add react-hook-form
+            yarn build
+            pm2 stop all
+            pm2 restart all
+            sudo rm -rf /var/www/news-app
+            sudo mkdir /var/www/news-app
+            sudo cp -rf ./build/* /var/www/news-app
+
