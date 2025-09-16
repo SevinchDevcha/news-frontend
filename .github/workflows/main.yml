@@ -26,4 +26,5 @@ jobs:
             pm2 restart all
             sudo rm -rf /var/www/news-app
             sudo mkdir /var/www/news-app
-            sudo cp -rf .build/*/var/www/news-app
+            sudo cp -rf ./build/* /var/www/news-app/
+
