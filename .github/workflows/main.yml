@@ -20,11 +20,12 @@ jobs:
             git stash
             git pull origin master --rebase
             rm -rf ./build
-            npm install --legacy-peer-deps
+            yarn install --legacy-peer-deps
+            yarn add react-hook-form
+            yarn build
             pm2 stop all
-            npm run build
             pm2 restart all
             sudo rm -rf /var/www/news-app
             sudo mkdir /var/www/news-app
-            sudo cp -rf ./build/* /var/www/news-app/
+            sudo cp -rf ./build/* /var/www/news-app
 
