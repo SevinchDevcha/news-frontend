@@ -44,13 +44,11 @@ function Profile() {
 				{/* Text section */}
 				<div className='md:w-1/2 space-y-6'>
 					<h1 className='text-3xl md:text-6xl font-bold leading-tight text-gray-800'>
-						Xush kelibsiz <span className='text-blue-600'>news app</span>,{' '}
+						Welcome to <span className='text-blue-600'>news app</span>,{' '}
 						{accaunt && <span className='text-pink-600'>{accaunt.name}</span>}
 					</h1>
 					<p className='text-gray-600 text-lg'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-						nostrum, omnis, vero obcaecati, in iusto officia reiciendis
-						quibusdam pariatur adipisci fugiat nam id tempora quod nemo?
+					Welcome to Sevinch's news site, you can leave him a message. This site is very important to him!q
 					</p>
 					<div className='flex justify-around'>
 						<Link to={'/dashboard/news'}>
