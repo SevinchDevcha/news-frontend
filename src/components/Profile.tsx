@@ -44,7 +44,7 @@ function Profile() {
 				{/* Text section */}
 				<div className='md:w-1/2 space-y-6'>
 					<h1 className='text-3xl md:text-6xl font-bold leading-tight text-gray-800'>
-						Welcome to the <span className='text-blue-600'>news app</span>,{' '}
+						Xush kelibsiz <span className='text-blue-600'>news app</span>,{' '}
 						{accaunt && <span className='text-pink-600'>{accaunt.name}</span>}
 					</h1>
 					<p className='text-gray-600 text-lg'>
