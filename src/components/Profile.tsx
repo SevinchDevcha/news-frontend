@@ -48,7 +48,7 @@ function Profile() {
 						{accaunt && <span className='text-pink-600'>{accaunt.name}</span>}
 					</h1>
 					<p className='text-gray-600 text-lg'>
-					Welcome to Sevinch's news site, you can leave him a message. This site is very important to him!q
+					Welcome to Sevinch's news site, you can leave him a message. This site is very important to him!
 					</p>
 					<div className='flex justify-around'>
 						<Link to={'/dashboard/news'}>
